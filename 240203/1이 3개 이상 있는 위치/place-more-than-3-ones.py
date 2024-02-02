@@ -6,7 +6,7 @@ for i in range(n):
     k.append(list(map(int, input().split())))
 
 def in_range(x, y, n):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 <= x < n and 0 <= y < n
 
 
 result = 0
