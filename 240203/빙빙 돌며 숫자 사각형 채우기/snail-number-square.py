@@ -3,7 +3,8 @@ n, m = map(int, input().split())
 dxs, dys = [0, 1, 0, -1], [1, 0, -1, 0]
 
 def in_range(x, y):
-    return 0 <= x and x < n and 0 <= y and y < n
+    return 0 <= x < n and 0 <= y < n
+
 x, y = 0, 0
 dir_num = 0
 
