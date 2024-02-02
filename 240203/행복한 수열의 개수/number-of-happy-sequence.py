@@ -13,19 +13,18 @@ for i in range(n):
     for j in range(n):
         if k[i][j] == r_p:
             r_cnt += 1
-            if m <= r_cnt:
-                r_b = True
         else:
             r_cnt = 1
         if k[j][i] == l_p:
             l_cnt += 1
-            if m <= l_cnt:
-                l_b = True
         else:
             l_cnt = 1
         r_p = k[i][j]
         l_p = k[j][i]
-
+        if m <= r_cnt:
+                r_b = True
+        if m <= l_cnt:
+                l_b = True
     if r_b == True:
         result += 1
     if l_b == True:
