@@ -4,8 +4,6 @@ int main() {
     int a, b ;
     double c;
     scanf("%d %d", &a, &b);
-    c = a+b;
-    c = c/(a-b);
-    printf("%.2lf", c);
+    printf("%.2lf", (double)(a+b)/(a-b));
     return 0;
 }
