@@ -10,13 +10,9 @@ result = 0
 result += int(box[x][y])
 for j in k:
     if j == "L":
-        now += 1
-        if now == 4:
-            now = 0
+        now = (now+1)%4
     elif j == "R":
-        now -= 1
-        if now == -3:
-            now = 1
+        now = (now+3)%4
     elif j == "F":
         nx = x + dx[now]
         ny = y + dy[now]
