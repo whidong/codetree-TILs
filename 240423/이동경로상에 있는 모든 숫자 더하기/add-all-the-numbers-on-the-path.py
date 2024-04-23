@@ -11,10 +11,11 @@ result += int(box[x][y])
 for j in k:
     if j == "L":
         now += 1
-        now = now%4
+        if now == 4:
+            now = 0
     elif j == "R":
         now -= 1
-        if now <= -3:
+        if now == -3:
             now = 1
     elif j == "F":
         if x + dx[now] == n or x + dx[now] < -1 or y + dy[now] == n or y + dy[now] < -1:
