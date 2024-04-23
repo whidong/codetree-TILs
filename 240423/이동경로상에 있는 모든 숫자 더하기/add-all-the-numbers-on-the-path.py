@@ -5,8 +5,7 @@ for i in range(n):
     box.append(list(input().split()))
 x, y = n//2, n//2
 dx, dy = [-1, 0, 1, 0], [0,-1, 0, 1]
-now = 0
-result = 0
+now, result = 0, 0
 result += int(box[x][y])
 for j in k:
     if j == "L":
@@ -22,5 +21,4 @@ for j in k:
             result += int(box[x][y])
         else:
             pass
-
 print(result)
