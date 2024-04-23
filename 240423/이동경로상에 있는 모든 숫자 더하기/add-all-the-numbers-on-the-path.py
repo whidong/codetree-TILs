@@ -14,12 +14,12 @@ for j in k:
         now = now%4
     elif j == "R":
         now -= 1
-        now = now%4
+        now = now%5
     elif j == "F":
         if x + dx[now] == n or x + dx[now] < -1 or y + dy[now] == n or y + dy[now] < -1:
             pass
         else:
-            x = x + dx[now]
-            y = y + dy[now]
+            x += dx[now]
+            y += dy[now]
             result += int(box[x][y])
 print(result)
