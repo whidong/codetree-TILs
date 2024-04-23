@@ -18,10 +18,13 @@ for j in k:
         if now == -3:
             now = 1
     elif j == "F":
-        if x + dx[now] == n or x + dx[now] < -1 or y + dy[now] == n or y + dy[now] < -1:
-            pass
-        else:
-            x += dx[now]
-            y += dy[now]
+        nx = x + dx[now]
+        ny = y + dy[now]
+        if nx >= 0 and nx < n and ny >= 0 and ny <n:
+            x = nx
+            y = ny
             result += int(box[x][y])
+        else:
+            pass
+
 print(result)
